@@ -86,7 +86,6 @@ function allWagesFor(record) {
 
 function calculatePayroll(array) {
     let total = array.reduce(function(accum, record ) {
-        // console.log(record)
         return accum + allWagesFor(record)
     }, 0)
 
@@ -95,8 +94,6 @@ function calculatePayroll(array) {
 
 function findEmployeeByFirstName(array, name) {
 
-    // console.log(array)
-    // console.log(name)
     let result = array.find(firstName => firstName.familyName)
     return result
 }
