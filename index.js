@@ -14,8 +14,11 @@
 
  let createEmployeeRecords = function (arrayOfArrays) {
     //  console.log("firstIndex", createEmployeeRecord(arrayOfArrays[0]))
-    let employeeRecords = []
-    employeeRecords.push(createEmployeeRecord(arrayOfArrays[0]), createEmployeeRecord(arrayOfArrays[1]))
+    let employeeRecords
+
+    employeeRecords = arrayOfArrays.map(e => {
+        return createEmployeeRecord(e)
+    })
     return employeeRecords
  }
 
@@ -110,6 +113,7 @@
  }
 
  let findEmployeeByFirstName = function (arrayOfEmployeeRecords, firstName) {
+     
     return arrayOfEmployeeRecords.find(employee => {
         // console.log("employee", employee.firstName === firstName)
         return employee.firstName === firstName
