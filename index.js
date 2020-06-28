@@ -70,10 +70,9 @@ const calculatePayroll = (employees) => {
 }
 
 const findEmployeeByFirstName = (employees, firstName) => {
-    return (employees.find(e => {
-        return (e.firstName === firstName);
-    }));
-    
+    return employees.find(e => {
+        return e.firstName === firstName
+    });
 }
 
 
